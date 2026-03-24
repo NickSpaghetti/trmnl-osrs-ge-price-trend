@@ -15,6 +15,7 @@ custom_fields:
   name: Item Id
   optional: false
   field_type: author_bio
+  category: osrs,ge,grand exchange,price
   description: Show the price trends of an item from the Grand Exchange in OSRS
   github_url: https://github.com/NickSpaghetti/trmnl-osrs-ge-price-tracker
   help_text: You can get the Item Id by looking in the url of the ge item detail page at https://secure.runescape.com/m=itemdb_oldschool/.
