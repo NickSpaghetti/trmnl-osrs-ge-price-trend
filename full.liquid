@@ -1,47 +1,61 @@
+{% assign id = trmnl.plugin_settings.custom_fields_values.item_id %}
+
 <div class="layout layout--col gap--space-between">
   <div class="grid grid--cols-2">
     <div class="item">
-      <div class="meta"></div>
       <div class="content">
-        <img class="image" src="{{ item.icon_large }}" alt="{{ item.name }} Large Icon">
+        <img class="image" src="{{ IDX_0.item.icon_large }}" alt="{{ item.name }} Icon" style="height: 160px; width: auto;">
       </div>
     </div>
     <div class="item">
-      <div class="meta"></div>
       <div class="content">
-        <span class="value value--medium">{{ item.name }}</span>
-        <span class="label">Name</span>
+        <span class="value value--medium">{{ IDX_0.item.name }}</span>
       </div>
     </div>
   </div>
+
   <div class="w-full b-h-gray-5"></div>
+
   <div class="grid grid--cols-2 grid--sm-cols-4">
     <div class="item">
-      <div class="meta"></div>
       <div class="content">
-        <span class="value value--small">{{ item.day30.change }}</span>
-        <span class="label">30 Day Trend ({{ item.day30.trend }})</span>
+        <span class="value value--small">{{ IDX_1.data[id].high | number_with_delimiter }}</span>
+        <span class="label">Today's High</span>
       </div>
     </div>
+
     <div class="item">
-      <div class="meta"></div>
       <div class="content">
-        <span class="value value--small">{{ item.day90.change }}</span>
-        <span class="label">90 Day Trend ({{ item.day90.trend }})</span>
+        <span class="value value--small">{{ IDX_1.data[id].low | number_with_delimiter }}</span>
+        <span class="label">Today's Low</span>
       </div>
     </div>
+
     <div class="item">
-      <div class="meta"></div>
       <div class="content">
-        <span class="value value--small">{{ item.day180.change }}</span>
-        <span class="label">180 Day Trend ({{ item.day180.trend }})</span>
+        <span class="value value--small">{{ IDX_0.item.day30.change }}</span>
+        <span class="label">30d ({{ IDX_0.item.day30.trend }})</span>
       </div>
     </div>
+
     <div class="item">
-      <div class="meta"></div>
       <div class="content">
-        <span class="value value--small">{{ item.today.price }}</span>
-        <span class="label">Today's Price ({{ item.today.trend }})</span>
+        <span class="value value--small">{{ IDX_0.item.day90.change }}</span>
+        <span class="label">90d ({{ IDX_0.item.day90.trend }})</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="content">
+        <span class="value value--small">{{ IDX_0.item.day180.change }}</span>
+        <span class="label">180d ({{ IDX_0.item.day180.trend }})</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="content">
+        <span class="value value--small">{{ IDX_0.item.today.price }}</span>
+        <span class="label">GE Today</span>
       </div>
     </div>
   </div>

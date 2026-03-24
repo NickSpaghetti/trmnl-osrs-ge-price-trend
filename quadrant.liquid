@@ -1,24 +1,34 @@
-<div class="layout layout--col">
-    <div class="item">
-      <span class="value value--small">{{ data.name }}</span>
-    </div>
+<div class="layout layout--col gap--space-between">
+  <div class="flex items--center gap--small">
+    <img src="{{ IDX_0.item.icon_large }}" style="height: 60px; width: 60px;" />
+    <span class="value" style="font-size: 20px; font-weight: bold; overflow: hidden; white-space: nowrap;">{{ IDX_0.item.name }}</span>
+  </div>
 
-  <div class="grid grid--cols-2 gap--1">
+
+  <div class="grid grid--cols-2">
     <div class="item">
-      <span class="value value--xs">{{ data.day30.change }}</span>
-      <span class="label">30d</span>
+      <div class="content flex--row gap--small">
+        <span class="label">30D:</span>
+        <span class="value" style="font-size: 13px;">{{ IDX_0.item.day30.change }}</span>
+      </div>
     </div>
     <div class="item">
-      <span class="value value--xs">{{ data.today.price }}</span>
-      <span class="label">Price</span>
+      <div class="content flex--row gap--small">
+        <span class="label">90D:</span>
+        <span class="value" style="font-size: 13px;">{{ IDX_0.item.day90.change }}</span>
+      </div>
     </div>
     <div class="item">
-      <span class="value value--xs">{{ data.day90.change }}</span>
-      <span class="label">90d</span>
+      <div class="content flex--row gap--small">
+        <span class="label">180D:</span>
+        <span class="value" style="font-size: 13px;">{{ IDX_0.item.day180.change }}</span>
+      </div>
     </div>
     <div class="item">
-      <span class="value value--xs">{{ data.day180.change }}</span>
-      <span class="label">180d</span>
+      <div class="content flex--row gap--small">
+        <span class="label">Price:</span>
+        <span class="value" style="font-size: 13px;">{{ IDX_0.item.today.price }}</span>
+      </div>
     </div>
   </div>
 </div>

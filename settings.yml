@@ -4,20 +4,24 @@ no_screen_padding: 'no'
 dark_mode: 'no'
 static_data: ''
 polling_verb: get
-framework_version: 2.3.7
-polling_url: https://secure.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item={{item_id}}
-polling_headers: ''
+framework_version: latest
+polling_url: "https://secure.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item={{item_id}}\r\nhttps://prices.runescape.wiki/api/v1/osrs/latest?id={{item_id}}"
+polling_headers: user-agent=https://github.com/NickSpaghetti/trmnl-osrs-ge-price-tracker
 polling_body: ''
-id: 36044
+id: 265824
 custom_fields:
 - keyname: item_id
-  field_type: author_bio
+  field_type: number
   name: Item Id
-  optional: false
-  category: games
-  description: Show the price trends of an item from the Grand Exchange in OSRS
-  github_url: https://github.com/NickSpaghetti/trmnl-osrs-ge-price-tracker
-  help_text: You can get the Item Id by looking in the url of the ge item detail page at https://secure.runescape.com/m=itemdb_oldschool/.
   default: 22486
-name: OSRS GE ITEM DETAIL
-refresh_interval: 1440
+  optional: false
+  help_text: Get the Item Id from the URL at https://secure.runescape.com/m=itemdb_oldschool/
+- keyname: bio
+  name: OSRS GE Price Trend
+  category: games,ecommerce
+  field_type: author_bio
+  description: Show the price trends of an item from the Grand Exchange in OSRS.
+  github_url: https://github.com/NickSpaghetti
+  learn_more_url: https://github.com/NickSpaghetti/trmnl-osrs-ge-price-trend
+name: OSRS GE Price Trend
+refresh_interval: 360
