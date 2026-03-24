@@ -1,0 +1,69 @@
+<div class="layout layout--col gap--space-between">
+  
+  {% if layout == 'quadrant' %}
+    <div class="grid grid--cols-2 items-center mb-2">
+      <div class="item">
+        <img class="image" src="{{ data.icon_large }}" style="height: 32px; width: 32px">
+      </div>
+      <div class="item">
+        <span class="value value--small">{{ data.name }}</span>
+      </div>
+    </div>
+    
+    <div class="grid grid--cols-2 gap--1">
+      <div class="item">
+        <span class="value value--xs">{{ data.day30.change }}</span>
+        <span class="label">30d</span>
+      </div>
+      <div class="item">
+        <span class="value value--xs">{{ data.today.price }}</span>
+        <span class="label">Price</span>
+      </div>
+    </div>
+
+  {% else %}
+    <div class="grid grid--cols-2">
+      <div class="item">
+        <div class="content">
+          <img class="image" src="{{ data.icon_large }}" alt="{{ data.name }} Icon">
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <span class="value value--medium">{{ data.name }}</span>
+          <span class="label">Name</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full b-h-gray-5"></div>
+
+    <div class="grid grid--cols-2 grid--sm-cols-4">
+      <div class="item">
+        <div class="content">
+          <span class="value value--small">{{ data.day30.change }}</span>
+          <span class="label">30 Day Trend ({{ data.day30.trend }})</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <span class="value value--small">{{ data.day90.change }}</span>
+          <span class="label">90 Day Trend ({{ data.day90.trend }})</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <span class="value value--small">{{ data.day180.change }}</span>
+          <span class="label">180 Day Trend ({{ data.day180.trend }})</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <span class="value value--small">{{ data.today.price }}</span>
+          <span class="label">Today's Price ({{ data.today.trend }})</span>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+</div>

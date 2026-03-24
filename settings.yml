@@ -11,10 +11,9 @@ polling_body: ''
 id: 36044
 custom_fields:
 - keyname: item_id
-  field_type: number
+  field_type: author_bio
   name: Item Id
   optional: false
-  field_type: author_bio
   category: games
   description: Show the price trends of an item from the Grand Exchange in OSRS
   github_url: https://github.com/NickSpaghetti/trmnl-osrs-ge-price-tracker

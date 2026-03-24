@@ -1,0 +1,24 @@
+<div class="layout layout--col">
+    <div class="item">
+      <span class="value value--small">{{ data.name }}</span>
+    </div>
+
+  <div class="grid grid--cols-2 gap--1">
+    <div class="item">
+      <span class="value value--xs">{{ data.day30.change }}</span>
+      <span class="label">30d</span>
+    </div>
+    <div class="item">
+      <span class="value value--xs">{{ data.today.price }}</span>
+      <span class="label">Price</span>
+    </div>
+    <div class="item">
+      <span class="value value--xs">{{ data.day90.change }}</span>
+      <span class="label">90d</span>
+    </div>
+    <div class="item">
+      <span class="value value--xs">{{ data.day180.change }}</span>
+      <span class="label">180d</span>
+    </div>
+  </div>
+</div>
